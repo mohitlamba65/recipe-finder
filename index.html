@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="./CSS/main-section.css">
+  <link rel="stylesheet" href="./CSS/filter-panel.css">
+  <link rel="stylesheet" href="./CSS/recipe-card.css">
+  <script src="https://kit.fontawesome.com/9c0a4a481d.js" crossorigin="anonymous"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=initTranslate"></script>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-section">
+      <div class="search-container">
+        <h1 class="sub-title">Receipe Finder</h1>
+        <h2>Find Recipes You Love with What You Have!</h2>
+        <form>
+          <input type="text" id="search-item" placeholder="Search by ingedrients">
+          <div class="submit-btn" color="#fff">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form>
+        <div class="ingredient-list">
+          <h2>Popular Ingedrients</h2>
+          <button><i class="fa-solid fa-plus" style="color: #FF6347"></i></i>Onion</button>
+          <button><i class="fa-solid fa-plus" style="color: #FF6347"></i></i>Tomato</button>
+          <button><i class="fa-solid fa-plus" style="color: #FF6347"></i></i>Chilly</button>
+          <button><i class="fa-solid fa-plus" style="color: #FF6347"></i></i>Turmeric</button>
+          <button><i class="fa-solid fa-plus" style="color: #FF6347"></i></i>Potato</button>
+          <button><i class="fa-solid fa-plus" style="color: #FF6347"></i></i>Garlic</button>
+        </div>
+      </div>
+
+      <!-- ------------------------------------filter panel-------------------------------------------- -->
+
+      <div class="filter-panel">
+        <h2>Filter Categories</h2>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>🍴 Cuisine</span>
+              <span class="chevron">▼</span>
+            </div>
+            <div class="accordion-body">
+              <select id="cuisine-dropdown" class="dropdown">
+                <option disabled selected>Select Cuisine</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>⏳ Preparation Time</span>
+
+              <span class="chevron">▼</span>
+            </div>
+            <div class="accordion-body">
+              <select id="time-dropdown" class="dropdown">
+                <option disabled selected>Select Preparation Time</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>🍽️ Serving Size</span>
+
+              <span class="chevron">▼</span>
+            </div>
+            <div class="accordion-body">
+              <select id="serving-dropdown" class="dropdown">
+                <option disabled selected>Select Serving Size</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>🥗 Diet</span>
+
+              <span class="chevron">▼</span>
+            </div>
+            <div class="accordion-body">
+              <select id="diet-dropdown" class="dropdown">
+                <option disabled selected>Select Diet</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------recipe card----------------------------------------------- -->
+    <!-- <select id="languageSelector"></select>
+  
+  <p id="translatableText">Welcome to Recipe Finder!</p>
+   -->
+    <div class="result hidden">
+      <div class="active-filters">
+        <h3>Active Filters:</h3>
+        <div id="chips-container"></div>
+      </div>
+
+      <div class="recipe-cards">
+        <ul id="card-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="./Scripts/state.js" type="module"></script>
+<script src="./Scripts/filter.js" type="module"></script>
+<script src="./Scripts/script.js" type="module"></script>
+
+</html>
